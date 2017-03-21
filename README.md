@@ -1,2 +1,5 @@
-##p1-g4
-###Projeto 1: cliente e servidor IRC em nodejs
+# PROJETO 1 DA DISCIPLINA DE APLICAÇÕES DISTRIBUÍDAS
+
+##cliente e servidor IRC em nodejs
+
+
