@@ -4,3 +4,10 @@
 
 ###Implementar um servidor IRC utilizando sockets em nodejs.  
 
+
+## Membros:
+
+* Gilmar Bernades
+* Weliton Marcos
+* Yan Rocha
+ 
