@@ -1,0 +1,24 @@
+{
+  "name": "g4-p1",
+  "version": "1.0.0",
+  "description": "* Gilmar Bernades\r * Weliton Marcos\r * Yan Rocha",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gilmar.bernardes@gitlab.com/ad-si-2017-1/p1-g4.git"
+  },
+  "author": "SI-AD-G4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ad-si-2017-1/p1-g4/issues"
+  },
+  "homepage": "https://gitlab.com/ad-si-2017-1/p1-g4#README"
+}
