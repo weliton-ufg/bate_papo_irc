@@ -1,14 +1,13 @@
-
 const net = require('net');
 const client = net.connect({port: 6667}, () => {
-  // 'connect' listener
-  console.log('connected to server!');
-  client.write('world!\r\n');
+  console.log('conectado ao servidor!');
+  //testando envio de comando ao sevidor
+  //client.write('NICK grupo-4!\r\n');
 });
-client.on('data', (data) => {
+client.on('data', function(data){
   console.log(data.toString());
   //client.end();
 });
-client.on('end', () => {
-  console.log('disconnected from server');
+client.on('end',function() {
+  console.log('disconectado do servidor');
 });
