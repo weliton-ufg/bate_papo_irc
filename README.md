@@ -1,5 +1,13 @@
 # PROJETO 1 DA DISCIPLINA DE APLICAÇÕES DISTRIBUÍDAS
 
-### cliente e servidor IRC em nodejs
+## Objetivo
+
+###Implementar um servidor IRC utilizando sockets em nodejs.  
 
 
+## Membros:
+
+* Gilmar Bernades
+* Weliton Marcos
+* Yan Rocha
+ 
