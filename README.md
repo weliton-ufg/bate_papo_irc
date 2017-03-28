@@ -2,12 +2,13 @@
 
 ## Objetivo
 
-###Implementar um servidor IRC utilizando sockets em nodejs.  
+### Implementar um servidor IRC utilizando sockets em nodejs.  
 
 
 ## Membros:
 
 * Gilmar Bernades
 * Weliton Marcos
+* Gerson Rosolim
 * Yan Rocha
  
