@@ -1,7 +1,7 @@
 // comandos.js
 
 //FUNÇÃO NICK
-exports.NICK = function (args, socket, nicks,retorno) {
+exports.NICK = function (args, socket, nicks, retorno) {
     var flagMudandoNick = false;
     var nomeTemporario;
     if (!args[1]) {
@@ -19,7 +19,7 @@ exports.NICK = function (args, socket, nicks,retorno) {
             delete nicks[socket.nick];
             flagMudandoNick = true;
             retorno.push(flagMudandoNick);
-            retorno.push(nomeTemporario); 
+            retorno.push(nomeTemporario);
         }
         nicks[args[1]] = socket.name;
         socket.nick = args[1];
@@ -31,3 +31,8 @@ exports.NICK = function (args, socket, nicks,retorno) {
 exports.USER = function () {
     //  return ;
 };
+
+exports.JOIN = function (){
+
+};
+
