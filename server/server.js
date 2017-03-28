@@ -59,11 +59,11 @@ var server = net.createServer(function (socket) {
 
 	}
 	function join(args) {
-
+		comandos.JOIN();
 	}
 
 	function user(args) {
-
+		comandos.USER();
 	}
 
 }).listen(6667);
