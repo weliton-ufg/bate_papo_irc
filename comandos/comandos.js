@@ -5,7 +5,7 @@ exports.NICK = function (args, socket, nicks, retorno) {
     var flagMudandoNick = false;
     var nomeTemporario;
     if (!args[1]) {
-        socket.write("ERRO:comando NINCK incompleto\n");
+        socket.write("ERRO:comando NICK incompleto\n");
         return;
     } else if (nicks[args[1]]) {//VERIFICAR SE O NICK JA EXISTE
         console.log(nicks);
