@@ -1,48 +1,58 @@
-// Buscando biblioteca TCP
+// Importar o módulo NET (Conexão TCP ou servidores locais) 
 var net = require('net');
+// Importa arquivo de comandos
 var comandos = require('../comandos/comandos.js');
 var clients = [];
 var nicks = {};
+// Cria um novo servidor que fica disponível para escutar eventos do tipo 'connection'
 var server = net.createServer(function (socket) {
-
+	// É atribuído ao atributo 'name' o endereço do cliente requisitante e a porta solicitada
 	socket.name = socket.remoteAddress + ":" + socket.remotePort
+	// Adiciona o socket na lista de cliente do servidor
 	clients.push(socket);
+	// Escreve um saldação e os dados de conexão do cliente
 	socket.write("Bem vindo " + socket.name + "\n");
+	// Mostra mensagem no chat
 	console.log('cliente conectado');
 
+	// Mensagem para todos os usuários do chat
 	broadcast(socket.name + " Entrou no chat\n", socket);
 	console.log(socket.name);
 
-	//EVENTO ONDE O A CONEXÃO E PERDIDA
+	// Desconexão do cliente
 	socket.on('end', function () {
 		console.log('cliente desconectado');
 
 	});
 	socket.on('data', function (data) {
-		// analisar a mensagem
+		// Função para analisar comando enviado pelo cliente
 		analisarComando(data);
 
 	});
 
 	function analisarComando(data) {
+	    // método trim() retira os espaços do lado esquero e direito da String
 		var mensagem = String(data).trim();
-		// o método split quebra a mensagem em partes separadas p/ espaço em branco 
-		//dessa forma arg recebe apenas o camando
+		// O método split organiza em Array todas as palavras da string
+		// Utiliza como parâmetro o separador passado, no caso " ".
+		// Poderia ser "," ";" ou qualquer outro.
 		var args = mensagem.split(" ");
-		if (args[0] == "NICK") nick(args); // se o primeiro argumento for NICK
+		// Verifica qual comando foi digitado pelo usuário
+		if (args[0] == "NICK") nick(args);
 		else if (args[0] == "USER") user(args);
 		else if (args[0] == "JOIN") join(args);
+		// Caso seja inexistente escreve na tela
 		else socket.write("ERRO: comando inexistente\n");
 	}
 
-	// Envia mensagem a todos os clients
+	// Envia mensagem a todos os clientes conectados
 	function broadcast(message, sender) {
 		clients.forEach(function (client) {
-			// Don't want to send it to sender
+			// Não envia para o remetente
 			if (client === sender) return;
 			client.write(message);
 		});
-		// Log it to the server output too
+		// Escreve mensagem no log do servidor
 		process.stdout.write(message)
 	}
 
