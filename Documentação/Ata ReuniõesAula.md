@@ -27,4 +27,7 @@ O Líder Weliton designou as atribuiçoes para cada membro, onde:
 
 ## Aula 03 - 03/04
 
+O Professor apresentou em sala a documentação exigida para o projeto, incluindó . Foi dado o prazo para a entrega do Sprint 2, até o dia 10 no Horário da aula.
+O prazo para a autoavalição se esteu até a noite do dia 04/04.
+
 
