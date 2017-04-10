@@ -1,4 +1,3 @@
-**Obs:** Ainda não codificado
 # QUIT
 
 O comando QUIT é usado para sair da sala de bate-papo. Com ele, você encerra a conexão. 
@@ -8,4 +7,4 @@ O comando QUIT é usado para sair da sala de bate-papo. Com ele, você encerra a
 QUIT (enter)
 
 #### Exemplo: 
-**QUIT**
+**QUIT** (enter)
